@@ -1,0 +1,24 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+dependencies {
+
+    implementation koin.koin_core
+
+    implementation retrofit.retrofit_core
+    implementation retrofit.converter_gson
+
+    implementation gson.gson_core
+
+    implementation okhttp.okhttp_core
+    implementation interceptor.logging_interceptor
+
+    implementation kotlinx_coroutines.coroutines_core
+
+}
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}

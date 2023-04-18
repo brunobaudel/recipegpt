@@ -1,3 +1,0 @@
-[submodule "android_network"]
-	path = android_network
-	url = https://github.com/brunobaudel/android_network.git
