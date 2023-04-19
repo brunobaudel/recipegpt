@@ -13,7 +13,8 @@ data class StartNetworkParameters(
     val isDebug: Boolean = false,
     val okHttpClient: OkHttpClient? = null,
     val readTimeOut: TimeInMileSeconds = 3000,
-    val writeTimeOut: TimeInMileSeconds = 3000
+    val writeTimeOut: TimeInMileSeconds = 3000,
+
 ) {
 
     fun getHttpClientDefault(): OkHttpClient = let {
@@ -32,6 +33,9 @@ data class StartNetworkParameters(
                 writeTimeout(writeTimeOut, TimeUnit.MILLISECONDS)
                 addInterceptor { chain ->
                     val request: Request = chain.request().newBuilder().build()
+
+
+
                     chain.proceed(request)
                 }
             }.build()

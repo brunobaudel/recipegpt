@@ -8,7 +8,7 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 
 val startNetworkParameters = StartNetworkParameters(
-    baseUrl = "",
+    baseUrl = "https://api.openai.com/v1/",
     isDebug = true
 )
 

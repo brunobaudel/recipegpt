@@ -34,10 +34,30 @@ android {
 
 dependencies {
 
+    implementation project(':network')
+
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.core:core-ktx:+'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation koin.koin_android
+    implementation koin.koin_android_compat
+    implementation koin.koin_androidx_workmanager
+
+    implementation retrofit.retrofit_core
+
+    implementation gson.gson_core
+
+    implementation glide.glide_core
+    annotationProcessor glide.annotationProcessor
+
+    implementation shimmer_facebook.shimmer_core
+
+    implementation mockk.mockk_core
+    implementation android_deps.core_testing
+    implementation kotlinx_coroutines.coroutines_test
 }
