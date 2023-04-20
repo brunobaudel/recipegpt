@@ -3,4 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/receipe_nav">
 
+    <include app:graph="@navigation/recipe_nav" />
+
 </navigation>

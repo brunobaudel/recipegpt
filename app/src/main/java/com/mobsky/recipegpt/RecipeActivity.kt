@@ -7,7 +7,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import com.mobsky.recipegpt.databinding.ActivityRecipeBinding
 
-class GitHubAccessActivity : AppCompatActivity() {
+class RecipeActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityRecipeBinding

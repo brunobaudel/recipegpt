@@ -3,6 +3,15 @@ plugins {
     id 'org.jetbrains.kotlin.jvm'
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
 dependencies {
 
     implementation koin.koin_core
@@ -17,8 +26,4 @@ dependencies {
 
     implementation kotlinx_coroutines.coroutines_core
 
-}
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
 }

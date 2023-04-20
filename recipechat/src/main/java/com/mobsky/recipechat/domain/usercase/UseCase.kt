@@ -1,4 +1,4 @@
-package com.estudos.githubshowprojects.domain.usercase
+package com.mobsky.recipechat.domain.usercase
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

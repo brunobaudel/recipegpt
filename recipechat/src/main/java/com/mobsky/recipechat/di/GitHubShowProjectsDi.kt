@@ -1,23 +1,22 @@
 package com.mobsky.recipechat.di
 
-import com.estudos.githubshowprojects.di.gitHubShowProjectsUseCasesModules
 import com.mobsky.recipechat.data.network.OpenAIGPTNetworkNetwork
 import com.mobsky.recipechat.data.network.OpenAIGPTNetworkImpl
-import com.mobsky.recipechat.data.repository.GitHubShowRepository
-import com.mobsky.recipechat.data.repository.GitHubShowRepositoryImpl
+import com.mobsky.recipechat.data.repository.OpenAIGPTRepository
+import com.mobsky.recipechat.data.repository.OpenAIGPTRepositoryImpl
 import org.koin.dsl.module
 
-private val openAIGPTNetworkNetworkingModules = module {
+private val chatRecipeNetworkModules = module {
     single<OpenAIGPTNetworkNetwork> { OpenAIGPTNetworkImpl(get()) }
 }
 
-private val gitHubShowProjectsRepositoryModule = module {
-    single<GitHubShowRepository> { GitHubShowRepositoryImpl(get()) }
+private val chatRecipeRepositoryModule = module {
+    single<OpenAIGPTRepository> { OpenAIGPTRepositoryImpl(get()) }
 }
 
-val gitHubShowProjectsModules = listOf(
-    openAIGPTNetworkNetworkingModules,
-    gitHubShowProjectsRepositoryModule,
-    gitHubShowProjectsUseCasesModules,
-    gitHubShowProjectsViewModelModules
+val chatRecipeModules = listOf(
+    chatRecipeNetworkModules,
+    chatRecipeRepositoryModule,
+    chatRecipeUseCasesModules,
+    chatRecipeViewModelModules
 )

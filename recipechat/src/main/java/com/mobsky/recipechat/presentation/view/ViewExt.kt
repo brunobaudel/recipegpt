@@ -1,4 +1,4 @@
-package com.estudos.githubshowprojects.presentation.custom_view
+package com.mobsky.recipechat.presentation.view
 
 import androidx.appcompat.widget.AppCompatImageView
 import com.bumptech.glide.Glide

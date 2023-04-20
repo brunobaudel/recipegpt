@@ -1,10 +1,11 @@
 package com.mobsky.recipechat.di
 
+import com.mobsky.recipechat.presentation.ChatRecipeViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
-internal val gitHubShowProjectsViewModelModules = module {
+internal val chatRecipeViewModelModules = module {
     viewModel {
-        ShowProjectsViewModel(projectUserCase = get())
+        ChatRecipeViewModel(projectUserCase = get())
     }
 }

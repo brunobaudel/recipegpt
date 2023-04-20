@@ -1,12 +1,12 @@
-package com.estudos.githubshowprojects.di
+package com.mobsky.recipechat.di
 
-import com.mobsky.recipechat.domain.usercase.GetProjectUseCase
+import com.mobsky.recipechat.domain.usercase.GetRecipeUseCase
 import org.koin.dsl.module
 
-internal val gitHubShowProjectsUseCasesModules = module {
+internal val chatRecipeUseCasesModules = module {
 
     single {
-        GetProjectUseCase(gitHubShowRepository = get())
+        GetRecipeUseCase(get())
     }
 
 }
