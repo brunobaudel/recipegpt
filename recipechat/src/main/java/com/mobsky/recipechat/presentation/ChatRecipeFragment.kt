@@ -31,13 +31,13 @@ class ChatRecipeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        lifecycle.addObserver(viewModel)
+       lifecycle.addObserver(viewModel)
     }
 
     private fun setUpObservables() {
-        with(viewModel) {
-
-        }
+//        with(viewModel) {
+//
+//        }
     }
 
     private fun showSnackBar(message: String) {

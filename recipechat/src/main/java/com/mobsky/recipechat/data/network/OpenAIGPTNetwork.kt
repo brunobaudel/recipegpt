@@ -4,6 +4,6 @@ import com.estudos.network.util.ResultWrapper
 import com.mobsky.recipechat.data.network.api.model.CompletionRequest
 import com.mobsky.recipechat.data.network.api.model.CompletionResponse
 
-interface OpenAIGPTNetworkNetwork {
+interface OpenAIGPTNetwork {
     suspend fun getCompletion(requestBody: CompletionRequest): ResultWrapper<CompletionResponse>
 }

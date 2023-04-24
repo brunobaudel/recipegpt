@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/receipe_nav">
+    android:id="@+id/receipe_nav"
+    app:startDestination="@id/recipe_chat_navigation">
 
-    <include app:graph="@navigation/recipe_nav" />
+    <include app:graph="@navigation/recipe_chat_navigation" />
 
 </navigation>

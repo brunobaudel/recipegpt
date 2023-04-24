@@ -2,7 +2,8 @@ package com.mobsky.recipegpt.di
 
 import com.estudos.network.StartNetworkParameters
 import com.estudos.network.startNetwork
-import com.mobsky.recipechat.data.network.OpenAIGPTNetworkNetwork
+import com.mobsky.recipechat.data.network.api.OpenAIGPT3NetworkApi
+import com.mobsky.recipechat.di.chatRecipeModules
 import org.koin.core.module.Module
 import org.koin.core.parameter.parametersOf
 import org.koin.dsl.module
@@ -24,7 +25,7 @@ val appDiModule = module {
     single {
         get<Retrofit> {
             parametersOf(startNetworkParameters)
-        }.create(OpenAIGPTNetworkNetwork::class.java)
+        }.create(OpenAIGPT3NetworkApi::class.java)
     }
 
 }
@@ -33,5 +34,5 @@ fun getAppModules(): List<Module> =
     listOf(
         startNetwork,
         appDiModule
-    )
+    ).plus(chatRecipeModules)
 

@@ -11,7 +11,7 @@ import kotlinx.coroutines.Dispatchers
 class OpenAIGPTNetworkImpl(
     private val openAIGPT3NetworkApi: OpenAIGPT3NetworkApi,
     private val dispatcher: CoroutineDispatcher = Dispatchers.IO
-) : OpenAIGPTNetworkNetwork {
+) : OpenAIGPTNetwork {
 
     override suspend fun getCompletion(requestBody: CompletionRequest): ResultWrapper<CompletionResponse> =
         safeApiCall(
@@ -20,8 +20,7 @@ class OpenAIGPTNetworkImpl(
                 openAIGPT3NetworkApi.getCompletion(requestBody)
             },
             transformError = {
-                ""
-//               Gson().fromJson(it, GitHubErrorModel::class.java).message
+              ""
             }
         )
 }
