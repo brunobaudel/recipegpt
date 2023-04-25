@@ -19,7 +19,7 @@ class ChatRecipeFragment : Fragment() {
     ): View {
         return ComposeView(requireContext()).apply {
             setContent {
-                ScreenRecipe("teste")
+                ScreenRecipe()
             }
         }
     }
